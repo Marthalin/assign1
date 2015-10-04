@@ -20,8 +20,8 @@ void setup () {
   d=550;
   e=50;
   x=floor(random(120));
-  f=floor(random(640));
-  g=floor(random(480));
+  f=floor(random(600));
+  g=floor(random(460));
 
   
 }
@@ -43,6 +43,6 @@ void draw() {
   rect(60,50,x,20);
   image(img5,e,50);
   
-  image(img6,f,g);  
+  image(img6,f,g);
   
 }
