@@ -1,7 +1,7 @@
 /* please implement your assign1 code in this file. */
 
 PImage img1,img2,img3,img4,img5,img6;
-int a,b,c,d,e,f,g;
+int a,b,c,d,e;
 int x;
 
 void setup () {
@@ -15,13 +15,11 @@ void setup () {
   img6 = loadImage("img/treasure.png");
   
   a=0;
-  b=-640;
-  c=-1280;
-  d=0;
-  e=floor(random(30,460));
+  b=0;
+  c=floor(random(30,440));
   x=floor(random(180));
-  f=floor(random(600));
-  g=floor(random(20,460));
+  d=floor(random(600));
+  e=floor(random(20,460));
   
   
 }
@@ -30,25 +28,20 @@ void draw() {
   // your code
   background(0);
   image(img1,a,0);
+  image(img2,a-img1.width,0);
+  image(img1,a-img1.width-img2.width,0);
   a++;
+  a%=(img1.width+img2.width);
   
-  image(img2,b,0);
-  b++;
-  b%=1280;
-  
-  image(img1,c,0);
-  c++;
-  c%=1280;
-  
-  image(img3,d,e);
-  d=d+3;
-  d%=640;
+  image(img3,b,c);
+  b=b+3;
+  b%=640;
   image(img4,550,240);
   
   fill(255,0,0);
   rect(30,20,x,20);
   image(img5,20,20);
   
-  image(img6,f,g);
+  image(img6,d,e);
   
 }
